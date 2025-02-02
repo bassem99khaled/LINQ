@@ -196,12 +196,96 @@ namespace LINQ
 
             #endregion
 
-          //  foreach (var item in Result)
-          //      Console.WriteLine(item);
+            //  foreach (var item in Result)
+            //      Console.WriteLine(item);
 
             #endregion
 
+            #region Transformasion(Projection) Operators _ Select  , SelectMany , Zip
 
+            #region Select
+
+            ///  var Result = ProductList.Select((P) => P.ProductName);
+            ///
+            ///  Result = from P in ProductList
+            ///           select P.ProductName;
+
+            /// var Result = ProductList.Where(P => P.UnitsInStock > 0).
+            ///     Select(P => $"{P.ProductId} :: {P.ProductName}");
+            ///
+            /// Result = from P in ProductList
+            ///          where P.UnitsInStock > 0
+            ///          select $"{P.ProductId} :: {P.ProductName}";
+
+            ///   var Result = ProductList.Where(P => P.UnitsInStock > 0)
+            ///       .Select(P => new Product()
+            ///       {
+            ///           ProductId = P.ProductId,
+            ///           ProductName = P.ProductName,
+            ///
+            ///       });
+
+            ///  Result = from P in ProductList
+            ///           where P.UnitsInStock > 0
+            ///           select new
+            ///           {
+            ///               P.ProductId,
+            ///              P.ProductName,
+            ///           }
+            ///
+
+            ///    var Result = ProductList.Where(P => P.UnitsInStock > 0).
+            ///        Select(P => new
+            ///        {
+            ///            ProductId = P.ProductId,
+            ///            PRoductName = P.ProductName,
+            ///            NewPRice = P.UnitPrice - ( P.UnitPrice * 0.2M)
+            ///        });
+
+            ///   Result = from P in ProductList
+            ///            where P.UnitsInStock > 0
+            ///            select new
+            ///            {
+            ///                P.ProductId,
+            ///                P.ProductName,
+            ///                NewPrice = P.UnitPrice - (P.UnitPrice * 0.2M)
+            ///            });
+            ///            
+
+
+            // Indexed Select
+            // Valid Only with Fluent Syntax  cant be written in Query Expression
+
+            /// var Result = ProductList.Select((P, index) => new
+            /// {
+            ///     index = index,
+            ///     Pname = P.ProductName,
+            ///
+            /// });
+
+
+            #endregion
+
+            #region Select Many
+
+            ///    var Result = CustomerList.SelectMany(C => C.Orders);
+            ///
+            ///    Result = from C in CustomerList
+            ///             from O in C.Order!
+            ///             select O;
+
+            ///    var Result = CustomerList.SelectMany(C => C.Orders! ,Customer , Order) => new({ customer, order});
+            ///
+            ///    Result = from C in CustomerList
+            ///             from O in C.Orders!
+            ///             select new { Customer = C, order = 0 };
+
+            #endregion
+            #region Ordering Operartors - Order , OrderDescending ,OrderBy , OrderByDescending , ThenBy , ThenByDesceding
+
+            #endregion
+
+            #endregion
 
         }
 
