@@ -281,8 +281,17 @@ namespace LINQ
             ///             select new { Customer = C, order = 0 };
 
             #endregion
+
             #region Ordering Operartors - Order , OrderDescending ,OrderBy , OrderByDescending , ThenBy , ThenByDesceding
 
+          //  var Result = ProductList.OrderByDescending(p => p.UnitsInStock).ThenByDescending(P => P.UnitPrice);
+          //
+          //  Result = from P in ProductList
+          //           orderby P.UnitsInStock descending , P.UnitPrice descending
+          //           select P;
+          //
+          //
+          //  var Result = ProductList.Where(P => P.UnitInStock)
             #endregion
 
             #endregion
