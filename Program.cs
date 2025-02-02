@@ -92,40 +92,59 @@ namespace LINQ
             #endregion
 
 
-            #region Q .3 Use ListGenerators.cs & Customers.xml
+            #region Q .3\.4 Use ListGenerators.cs & Customers.xml
             //  3.Sort a list of products by units in stock from highest to lowest.
             //  4.Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
             //  string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
 
-               
-          //      var sortedByStock = ListGenerator.ProductList
-          //          .OrderByDescending(p => p.UnitsInStock)
-          //          .Select(p => new { p.ProductName, p.UnitsInStock });
-          //
-          //      Console.WriteLine("Products sorted by units in stock (highest to lowest):");
-          //      foreach (var product in sortedByStock)
-          //      {
-          //          Console.WriteLine($"{product.ProductName} - {product.UnitsInStock} units");
-          //      }
-          //
-          //      
-          //      string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-          //
-          //      var sortedDigits = Arr.OrderBy(word => word.Length).ThenBy(word => word);
-          //
-          //      Console.WriteLine("\nDigits sorted by length and then alphabetically:");
-          //      foreach (var word in sortedDigits)
-          //      {
-          //          Console.WriteLine(word);
-          //      }
-     
 
-    #endregion
+            //      var sortedByStock = ListGenerator.ProductList
+            //          .OrderByDescending(p => p.UnitsInStock)
+            //          .Select(p => new { p.ProductName, p.UnitsInStock });
+            //
+            //      Console.WriteLine("Products sorted by units in stock (highest to lowest):");
+            //      foreach (var product in sortedByStock)
+            //      {
+            //          Console.WriteLine($"{product.ProductName} - {product.UnitsInStock} units");
+            //      }
+            //
+            //      
+            //      string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //
+            //      var sortedDigits = Arr.OrderBy(word => word.Length).ThenBy(word => word);
+            //
+            //      Console.WriteLine("\nDigits sorted by length and then alphabetically:");
+            //      foreach (var word in sortedDigits)
+            //      {
+            //          Console.WriteLine(word);
+            //      }
 
 
+            #endregion
 
-    #region
+
+
+            #region Q .5 Sort first by word length and then by a case-insensitive sort of the words in an array.
+
+            //string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+
+       
+        //       string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+        //
+        // 
+        //       var sortedWords = from word in words
+        //                         orderby word.Length, word.ToLower()
+        //                         select word;
+        //
+        //       Console.WriteLine("Words sorted by length and then case-insensitively:");
+        //       foreach (var word in sortedWords)
+        //       {
+        //           Console.WriteLine(word);
+        //       }
+            
+
 
 
 
