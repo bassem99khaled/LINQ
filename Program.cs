@@ -80,6 +80,31 @@
             #endregion
 
             #endregion
+
+            #region What is LINQ
+            // LINQ : Stands for LAnguage_Integrated Query { C# 3.0 Feature }
+            // LINQ :  +40 Extension Methods for the Built_in Interface "IEnumerable"
+            //      :  Named As " LINQ Operators " Existed At Class Enumerable"
+            //      :  Categoriezed int 13 Category 
+
+            //  Use LINQ Operators Againest Data , Regardeless its Data Store ( File , DataBase Provider { SQL Server , Oracle , MySQL , and Etc .... )
+            // Sequence : it an Object From Class Implemeting the built_in Interface " IEnumerable" Like List , HashSet , Dictionary , ArrayList , and Etc ...
+
+            // 1. Local  Sequence : L20 L2XML
+            // 2. Remote Sequence : L2EF
+
+            // List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            //
+            // List<int> OddNumbers = Numbers.Where((N) => % 2 == 1 ).ToList();
+            //
+            // Numbers.AddRange([11, 12, 13, 14, 15]);
+            //
+            //
+            // foreach(int odd in OddNumbers)
+            //     Console.WriteLine(odd);
+            #endregion
+
+
         }
     }
 }
