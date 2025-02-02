@@ -1,4 +1,5 @@
-﻿using System.Runtime.ConstrainedExecution;
+﻿using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
 
@@ -188,33 +189,73 @@ namespace LINQ
             #region Q 8. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
             // string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
- 
-              //  string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-              //
-              //  var filteredReversedDigits = (from word in Arr
-              //                                where word.Length > 1 && word[1] == 'i'
-              //                                select word).Reverse();
-              //
-              //  Console.WriteLine("Digits whose second letter is 'i', reversed order:");
-              //  foreach (var word in filteredReversedDigits)
-              //  {
-              //      Console.WriteLine(word);
-              //  }
-              //
+
+            //  string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //
+            //  var filteredReversedDigits = (from word in Arr
+            //                                where word.Length > 1 && word[1] == 'i'
+            //                                select word).Reverse();
+            //
+            //  Console.WriteLine("Digits whose second letter is 'i', reversed order:");
+            //  foreach (var word in filteredReversedDigits)
+            //  {
+            //      Console.WriteLine(word);
+            //  }
+            //
+
+
+            #endregion
+
+            #region Q 1. 2. LINQ – Transformation Operators
+
+            // Use ListGenerators.cs & Customers.xml
+            // 1.Return a sequence of just the names of a list of products.                                                           2.Produce a sequence of the uppercase and lowercase versions of each word in the original array(Anonymous Types).
+            //  string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            //2.Produce a sequence of the uppercase and lowercase versions of each word in the original array(Anonymous Types).
+
+
+
+            //  var productNames = from product in ListGenerator.ProductList
+            //                     select product.ProductName;
+            //
+            //  Console.WriteLine("Product Names:");
+            //  foreach (var name in productNames)
+            //  {
+            //      Console.WriteLine(name);
+            //  }
+            //
+            //  string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            //
+            //  var wordTransformations = from word in words
+            //                            select new
+            //                            {
+            //                                Upper = word.ToUpper(),
+            //                                Lower = word.ToLower()
+            //                            };
+            //
+            //  Console.WriteLine("\nUppercase and Lowercase versions of words:");
+            //  foreach (var word in wordTransformations)
+            //  {
+            //      Console.WriteLine($"Upper: {word.Upper}, Lower: {word.Lower}");
+            //  }
+           
+
+    #endregion
+
+
+    #region
+
+    #endregion
+
+
+    #region
 
 
     #endregion
 
 
-
 }
 
-private class ListGenerators
-        {
-            internal static List<Product> GetProducts()
-            {
-                throw new NotImplementedException();
-            }
-        }
+
     }
     }
