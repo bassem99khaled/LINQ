@@ -45,28 +45,28 @@ namespace LINQ
 
             #region AnonymousType
 
-        //  var employee = new {  Id = 1 , Name = "Basseem" , salary = 9_000};
-        //
-        //  // the object that will be created from "anonymoustype" => is an imutable object  [ cant be changed]
-        //
-        //  employee = employee with { Id = 21 }; // syntax Sugar [ C# 10.0 ]
-        //
-        //  Console.WriteLine(employee.Id);
-        //  int x = 10;
-        //  Console.WriteLine(x.GetType().Name);
-        //
-        //  var employee02 = new { Id = 2, Name = "khaled", salary = 5_666 };
-        //
-        //  // the same AnonymousType As Long As:
-        //  /// 1. the same properties Naming [case Sensitive]
-        //  /// 2. the properties Oreder
-        //  
-        //  Console.WriteLine(employee.GetType().Name);
-        //
-        //
-        //  var product = new { productName = "Chease", productPrice = 100 };
-        //
-        //  Console.WriteLine(product.GetType().Name);
+            //  var employee = new {  Id = 1 , Name = "Basseem" , salary = 9_000};
+            //
+            //  // the object that will be created from "anonymoustype" => is an imutable object  [ cant be changed]
+            //
+            //  employee = employee with { Id = 21 }; // syntax Sugar [ C# 10.0 ]
+            //
+            //  Console.WriteLine(employee.Id);
+            //  int x = 10;
+            //  Console.WriteLine(x.GetType().Name);
+            //
+            //  var employee02 = new { Id = 2, Name = "khaled", salary = 5_666 };
+            //
+            //  // the same AnonymousType As Long As:
+            //  /// 1. the same properties Naming [case Sensitive]
+            //  /// 2. the properties Oreder
+            //  
+            //  Console.WriteLine(employee.GetType().Name);
+            //
+            //
+            //  var product = new { productName = "Chease", productPrice = 100 };
+            //
+            //  Console.WriteLine(product.GetType().Name);
             #endregion
 
             #region Extension Method
@@ -155,19 +155,55 @@ namespace LINQ
 
             // IMMEDIATE eXECUTION ( eLEMENT oPERATORS , cASTING oPERATORS , aGGERAGATE oPEARTORS  )
 
-          //  List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-          //
-          //  var Result = Numbers.Where((N) => N % 2 == 1).ToList(); // 1, 3 , 4 ,7 ,9
-          //
-          //  Numbers.AddRange([11, 12, 13, 15]);
-          //
-          //  foreach (var odd in Result)
-          //      Console.WriteLine(odd);
+            //  List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            //
+            //  var Result = Numbers.Where((N) => N % 2 == 1).ToList(); // 1, 3 , 4 ,7 ,9
+            //
+            //  Numbers.AddRange([11, 12, 13, 15]);
+            //
+            //  foreach (var odd in Result)
+            //      Console.WriteLine(odd);
             #endregion
             #endregion
 
-            Console.WriteLine(ListGenerator.ProductList[10]);
+            #region FILTRATION (RESTRICTATION) Operators _ where , OfType
+            #region Where
+
+            ///  var Result = ProductList.Where(P => P.UnitsInStock == 0);
+            ///
+            ///  Result = from P in ProductList
+            ///           where P.UnitsInStock == 0
+            ///           select P;
+
+            /// var Result = ProductList.Where(P => P.UnitsInStock == 0 && P.Category == "Meat/Poultry");
+            ///
+            /// Result = from P in ProductList
+            ///          where P.UnitsInStock == 0
+            ///          select P;
+
+            ///  // Indexed Where
+            ///
+            /// // Get From the first 10 Products , the Products that are out of stock
+            ///
+            /// var Result = ProductList.where((ProductList ,I) => I < 10 && ProductList.UnitsInStock== 0)
+
+
+            #endregion
+
+            #region OfType
+
+            //  var Result = ProductList.OfType<Product>()
+
+            #endregion
+
+          //  foreach (var item in Result)
+          //      Console.WriteLine(item);
+
+            #endregion
+
+
 
         }
+
     }
 }
