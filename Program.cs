@@ -154,7 +154,7 @@ namespace LINQ
             //   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
 
-          
+
             //   var sortedProducts = from product in ListGenerator.ProductList
             //                        orderby product.Category, product.UnitPrice descending
             //                        select new { product.Category, product.ProductName, product.UnitPrice };
@@ -177,15 +177,30 @@ namespace LINQ
             //   {
             //       Console.WriteLine(word);
             //   }
-     
 
 
 
 
-    #endregion
+
+            #endregion
 
 
-    #region
+            #region Q 8. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
+            // string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+ 
+              //  string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+              //
+              //  var filteredReversedDigits = (from word in Arr
+              //                                where word.Length > 1 && word[1] == 'i'
+              //                                select word).Reverse();
+              //
+              //  Console.WriteLine("Digits whose second letter is 'i', reversed order:");
+              //  foreach (var word in filteredReversedDigits)
+              //  {
+              //      Console.WriteLine(word);
+              //  }
+              //
 
 
     #endregion
