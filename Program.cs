@@ -284,28 +284,25 @@ namespace LINQ
 
             #endregion
 
-
             #region Q 5.Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
             //  int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
             //  int[] numbersB = { 1, 3, 5, 7, 8 };
-            //  Result
-            //  Pairs where a<b:
-            //0 is less than 1
-            //0 is less than 3
-            //0 is less than 5
-            //0 is less than 7
-            //0 is less than 8
-            //2 is less than 3
-            //2 is less than 5
-            //2 is less than 7
-            //2 is less than 8
-            //4 is less than 5
-            //4 is less than 7
-            //4 is less than 8
-            //5 is less than 7
-            //5 is less than 8
-            //6 is less than 7
-            //6 is less than 8
+
+
+
+
+                //  int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+                //  int[] numbersB = { 1, 3, 5, 7, 8 };
+                //
+                //
+                //
+                //  var pairsQuery =
+                //      from a in numbersA
+                //      from b in numbersB
+                //      where a < b
+                //      select new { A = a, B = b };
+                //
+        
 
 
 
@@ -315,15 +312,15 @@ namespace LINQ
             // 6.Select all orders where the order total is less than 500.00.
             //    7.Select all orders where the order was made in 1998 or later.
 
-            
-         //  var ordersUnder500 = Orders.Where(order => order.OrderTotal < 500.00m);
-         //
-         //
-         //  var ordersFrom1998Query =
-         //      from order in orders
-         //      where order.OrderDate.Year >= 1998
-         //      select order;
-         //
+
+            //  var ordersUnder500 = Orders.Where(order => order.OrderTotal < 500.00m);
+            //
+            //
+            //  var ordersFrom1998Query =
+            //      from order in orders
+            //      where order.OrderDate.Year >= 1998
+            //      select order;
+            //
             #endregion
         }
 
