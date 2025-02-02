@@ -4,6 +4,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.X86;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LINQ
 {
@@ -150,7 +151,6 @@ namespace LINQ
 
             #endregion
 
-
             #region Q .6 \ .7 Use ListGenerators.cs & Customers.xml
             //   6.Sort a list of products, first by category, and then by unit price, from highest to lowest.
             //   7.Sort first by word length and then by a case -insensitive descending sort of the words in an array.
@@ -186,7 +186,6 @@ namespace LINQ
 
 
             #endregion
-
 
             #region Q 8. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order in the original array.
             // string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -244,56 +243,89 @@ namespace LINQ
 
             #endregion
 
-
             #region Q.3 4. Use ListGenerators.cs & Customers.xml
             //3.Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
             //4.Determine if the value of ints in an array match their position in the array.
             //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-    
-         //      var productInfo = from product in ListGenerator.ProductList
-         //                        select new
-         //                        {
-         //                            product.ProductName,
-         //                            Price = product.UnitPrice, 
-         //                            product.Category
-         //                        };
+
+            //      var productInfo = from product in ListGenerator.ProductList
+            //                        select new
+            //                        {
+            //                            product.ProductName,
+            //                            Price = product.UnitPrice, 
+            //                            product.Category
+            //                        };
+            //
+            //      Console.WriteLine("Product Info:");
+            //      foreach (var product in productInfo)
+            //      {
+            //          Console.WriteLine($"Name: {product.ProductName}, Price: {product.Price}, Category: {product.Category}");
+            //      }
+            //
+            //
+            //
+            //      int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            //
+            //      var numberMatch = from index in Enumerable.Range(0, Arr.Length)
+            //                        select new
+            //                        {
+            //                            Number = Arr[index],
+            //                            InPlace = Arr[index] == index
+            //                        };
+            //
+            //      Console.WriteLine("\nNumber: In-place?");
+            //      foreach (var item in numberMatch)
+            //      {
+            //          Console.WriteLine($"{item.Number}: {item.InPlace}");
+            //      }
+
+
+
+            #endregion
+
+
+            #region Q 5.Returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
+            //  int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //  int[] numbersB = { 1, 3, 5, 7, 8 };
+            //  Result
+            //  Pairs where a<b:
+            //0 is less than 1
+            //0 is less than 3
+            //0 is less than 5
+            //0 is less than 7
+            //0 is less than 8
+            //2 is less than 3
+            //2 is less than 5
+            //2 is less than 7
+            //2 is less than 8
+            //4 is less than 5
+            //4 is less than 7
+            //4 is less than 8
+            //5 is less than 7
+            //5 is less than 8
+            //6 is less than 7
+            //6 is less than 8
+
+
+
+            #endregion
+
+            #region Q 6. 7. Use ListGenerators.cs & Customers.xml
+            // 6.Select all orders where the order total is less than 500.00.
+            //    7.Select all orders where the order was made in 1998 or later.
+
+            
+         //  var ordersUnder500 = Orders.Where(order => order.OrderTotal < 500.00m);
          //
-         //      Console.WriteLine("Product Info:");
-         //      foreach (var product in productInfo)
-         //      {
-         //          Console.WriteLine($"Name: {product.ProductName}, Price: {product.Price}, Category: {product.Category}");
-         //      }
          //
+         //  var ordersFrom1998Query =
+         //      from order in orders
+         //      where order.OrderDate.Year >= 1998
+         //      select order;
          //
-         //
-         //      int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-         //
-         //      var numberMatch = from index in Enumerable.Range(0, Arr.Length)
-         //                        select new
-         //                        {
-         //                            Number = Arr[index],
-         //                            InPlace = Arr[index] == index
-         //                        };
-         //
-         //      Console.WriteLine("\nNumber: In-place?");
-         //      foreach (var item in numberMatch)
-         //      {
-         //          Console.WriteLine($"{item.Number}: {item.InPlace}");
-         //      }
-     
-
-
-    #endregion
-
-
-    #region
-
-
-    #endregion
-
-
-}
+            #endregion
+        }
 
 
     }
