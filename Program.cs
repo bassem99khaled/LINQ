@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.X86;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 namespace LINQ
@@ -238,12 +240,49 @@ namespace LINQ
             //  {
             //      Console.WriteLine($"Upper: {word.Upper}, Lower: {word.Lower}");
             //  }
-           
-
-    #endregion
 
 
-    #region
+            #endregion
+
+
+            #region Q.3 4. Use ListGenerators.cs & Customers.xml
+            //3.Produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
+            //4.Determine if the value of ints in an array match their position in the array.
+            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+    
+         //      var productInfo = from product in ListGenerator.ProductList
+         //                        select new
+         //                        {
+         //                            product.ProductName,
+         //                            Price = product.UnitPrice, 
+         //                            product.Category
+         //                        };
+         //
+         //      Console.WriteLine("Product Info:");
+         //      foreach (var product in productInfo)
+         //      {
+         //          Console.WriteLine($"Name: {product.ProductName}, Price: {product.Price}, Category: {product.Category}");
+         //      }
+         //
+         //
+         //
+         //      int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+         //
+         //      var numberMatch = from index in Enumerable.Range(0, Arr.Length)
+         //                        select new
+         //                        {
+         //                            Number = Arr[index],
+         //                            InPlace = Arr[index] == index
+         //                        };
+         //
+         //      Console.WriteLine("\nNumber: In-place?");
+         //      foreach (var item in numberMatch)
+         //      {
+         //          Console.WriteLine($"{item.Number}: {item.InPlace}");
+         //      }
+     
+
 
     #endregion
 
