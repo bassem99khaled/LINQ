@@ -104,6 +104,36 @@
             //     Console.WriteLine(odd);
             #endregion
 
+            #region LINQ Syntax
+
+         //   List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            #region 1. Fluent Syntax
+
+            /// 1. Fluent Syntax
+            /// 1.1 Call "LINQ Operators" as => Static Method Through The " Enumerable" Class
+            /// 
+          //  var Odds = Enumerable.Where(Numbers, (N) => N % 2 == 1);
+
+            /// 1.2 Call"LINQ Operators" as => Extension Method [recommended}
+            #endregion
+            #region 1. Query Sytnax [Query Expression]
+
+            //2. Query Syntax [ Query Expression] : Like => SQLServer Style
+
+            /*
+             * Select N
+             * From Numbers N
+             * Where N % 2 = 1
+             * 
+             */
+
+        //   var Odds = from N in Numbers
+        //              where N % 2 == 1
+        //              select N; 
+            #endregion
+         //  foreach(int odd in Odds)
+         //      Console.WriteLine(odd);
+            #endregion
 
         }
     }
