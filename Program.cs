@@ -91,7 +91,6 @@ namespace LINQ
 
             #endregion
 
-
             #region Q .3\.4 Use ListGenerators.cs & Customers.xml
             //  3.Sort a list of products by units in stock from highest to lowest.
             //  4.Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
@@ -123,35 +122,63 @@ namespace LINQ
 
             #endregion
 
-
-
             #region Q .5 Sort first by word length and then by a case-insensitive sort of the words in an array.
 
             //string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
 
-       
-        //       string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-        //
-        // 
-        //       var sortedWords = from word in words
-        //                         orderby word.Length, word.ToLower()
-        //                         select word;
-        //
-        //       Console.WriteLine("Words sorted by length and then case-insensitively:");
-        //       foreach (var word in sortedWords)
-        //       {
-        //           Console.WriteLine(word);
-        //       }
-            
+
+            //       string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //
+            // 
+            //       var sortedWords = from word in words
+            //                         orderby word.Length, word.ToLower()
+            //                         select word;
+            //
+            //       Console.WriteLine("Words sorted by length and then case-insensitively:");
+            //       foreach (var word in sortedWords)
+            //       {
+            //           Console.WriteLine(word);
+            //       }
 
 
 
 
-    #endregion
+
+            #endregion
 
 
-    #region
+            #region Q .6 \ .7 Use ListGenerators.cs & Customers.xml
+            //   6.Sort a list of products, first by category, and then by unit price, from highest to lowest.
+            //   7.Sort first by word length and then by a case -insensitive descending sort of the words in an array.
+            //   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+
+          
+            //   var sortedProducts = from product in ListGenerator.ProductList
+            //                        orderby product.Category, product.UnitPrice descending
+            //                        select new { product.Category, product.ProductName, product.UnitPrice };
+            //
+            //   Console.WriteLine("Products sorted by category, then by unit price (highest to lowest):");
+            //   foreach (var product in sortedProducts)
+            //   {
+            //       Console.WriteLine($"{product.Category} - {product.ProductName} - ${product.UnitPrice}");
+            //   }
+            //
+            //
+            //   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //
+            //   var sortedWords = from word in Arr
+            //                     orderby word.Length, word.ToLower() descending
+            //                     select word;
+            //
+            //   Console.WriteLine("\nWords sorted by length, then case-insensitively in descending order:");
+            //   foreach (var word in sortedWords)
+            //   {
+            //       Console.WriteLine(word);
+            //   }
+     
+
 
 
 
