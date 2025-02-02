@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            #region Featrues Need To Be Known Before LINQ
+
             #region Implicitly Typed Local Variable
 
 
@@ -63,6 +65,20 @@
             var product = new { productName = "Chease", productPrice = 100 };
 
             Console.WriteLine(product.GetType().Name);
+            #endregion
+
+            #region Extension Method
+
+            //  int X = 12345;
+            //
+            //  int Y = IntExtensions.Reverse(X);
+            //
+            //  Y = X.Reverse();
+            //
+            //  Console.WriteLine(Y);
+
+            #endregion
+
             #endregion
         }
     }
