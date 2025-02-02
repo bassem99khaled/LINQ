@@ -106,13 +106,13 @@
 
             #region LINQ Syntax
 
-         //   List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            //   List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             #region 1. Fluent Syntax
 
             /// 1. Fluent Syntax
             /// 1.1 Call "LINQ Operators" as => Static Method Through The " Enumerable" Class
             /// 
-          //  var Odds = Enumerable.Where(Numbers, (N) => N % 2 == 1);
+            //  var Odds = Enumerable.Where(Numbers, (N) => N % 2 == 1);
 
             /// 1.2 Call"LINQ Operators" as => Extension Method [recommended}
             #endregion
@@ -127,14 +127,42 @@
              * 
              */
 
-        //   var Odds = from N in Numbers
-        //              where N % 2 == 1
-        //              select N; 
+            //   var Odds = from N in Numbers
+            //              where N % 2 == 1
+            //              select N; 
             #endregion
-         //  foreach(int odd in Odds)
-         //      Console.WriteLine(odd);
+            //  foreach(int odd in Odds)
+            //      Console.WriteLine(odd);
             #endregion
 
+            #region LINQ Introduction
+            #region 1. Differed Executiom
+            // 1. Differed Execution ( LAstest Version of Data)
+
+            //  List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            //
+            //  var Result = Numbers.Where((N) => N % 2 == 1 );
+            //
+            //  Numbers.AddRange([11, 12, 13, 15]);
+            //
+            //  foreach( var number in Numbers )
+            //      Console.WriteLine(number);
+            #endregion
+
+            #region 2. Immediate Execution
+
+            // IMMEDIATE eXECUTION ( eLEMENT oPERATORS , cASTING oPERATORS , aGGERAGATE oPEARTORS  )
+
+            List<int> Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            var Result = Numbers.Where((N) => N % 2 == 1).ToList(); // 1, 3 , 4 ,7 ,9
+
+            Numbers.AddRange([11, 12, 13, 15]);
+
+            foreach (var odd in Result)
+                Console.WriteLine(odd);
+            #endregion
+            #endregion
         }
     }
 }
