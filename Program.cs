@@ -14,33 +14,28 @@ namespace LINQ
 
         static void Main(string[] args)
         {
-            #region Q.1 Use ListGenerators.cs & Customers.xml
+            #region Q.1 .2 .3 Use ListGenerators.cs & Customers.xml
             //   1.Find all products that are out of stock.
             //  2.Find all products that are in stock and cost more than 3.00 per unit.
             //  3.Returns digits whose name is shorter than their value.
 
 
 
+            // 1.
+            //          var outOfStockQuery =
+            //          from product in ListGenerator.ProductList
+            //          where product.UnitsInStock == 0
+            //          select product;
+            //
+            //    
+            //
+            // 2.
+            //          var inStockExpensive = ListGenerator.ProductList
+            //          .Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3.00m);
 
-            //      List<Product> products = ListGenerators.GetProducts();
-            //
-            //    
-            //      var outOfStockProducts = products.Where(p => p.UnitsInStock == 0);
-            //      Console.WriteLine("Products out of stock:");
-            //      foreach (var product in outOfStockProducts)
-            //      {
-            //          Console.WriteLine(product.ProductName);
-            //      }
-            //
-            //    
-            //
-            //      var expensiveInStockProducts = products.Where(p => p.UnitsInStock > 0 && p.UnitPrice > 3.00m);
-            //      Console.WriteLine("\nIn-stock products costing more than $3.00:");
-            //      foreach (var product in expensiveInStockProducts)
-            //      {
-            //          Console.WriteLine(product.ProductName);
-            //      }
-            //
+
+            // 3.
+
             //      Dictionary<int, string> digitNames = new Dictionary<int, string>
             //      {
             //  { 1, "One" }, { 2, "Two" }, { 3, "Three" }, { 4, "Four" },
@@ -291,18 +286,18 @@ namespace LINQ
 
 
 
-                //  int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
-                //  int[] numbersB = { 1, 3, 5, 7, 8 };
-                //
-                //
-                //
-                //  var pairsQuery =
-                //      from a in numbersA
-                //      from b in numbersB
-                //      where a < b
-                //      select new { A = a, B = b };
-                //
-        
+            //  int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            //  int[] numbersB = { 1, 3, 5, 7, 8 };
+            //
+            //
+            //
+            //  var pairsQuery =
+            //      from a in numbersA
+            //      from b in numbersB
+            //      where a < b
+            //      select new { A = a, B = b };
+            //
+
 
 
 
